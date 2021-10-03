@@ -1,0 +1,9 @@
+C:\hospital\HospiEnCasa.App\HospiEnCasa.App.persistencia\bin\Debug\netstandard2.0\HospiEnCasa.App.Persistencia.deps.json
+C:\hospital\HospiEnCasa.App\HospiEnCasa.App.persistencia\bin\Debug\netstandard2.0\HospiEnCasa.App.Persistencia.dll
+C:\hospital\HospiEnCasa.App\HospiEnCasa.App.persistencia\bin\Debug\netstandard2.0\HospiEnCasa.App.Persistencia.pdb
+C:\hospital\HospiEnCasa.App\HospiEnCasa.App.persistencia\obj\Debug\netstandard2.0\HospiEnCasa.App.Persistencia.csprojAssemblyReference.cache
+C:\hospital\HospiEnCasa.App\HospiEnCasa.App.persistencia\obj\Debug\netstandard2.0\HospiEnCasa.App.Persistencia.AssemblyInfoInputs.cache
+C:\hospital\HospiEnCasa.App\HospiEnCasa.App.persistencia\obj\Debug\netstandard2.0\HospiEnCasa.App.Persistencia.AssemblyInfo.cs
+C:\hospital\HospiEnCasa.App\HospiEnCasa.App.persistencia\obj\Debug\netstandard2.0\HospiEnCasa.App.Persistencia.csproj.CoreCompileInputs.cache
+C:\hospital\HospiEnCasa.App\HospiEnCasa.App.persistencia\obj\Debug\netstandard2.0\HospiEnCasa.App.Persistencia.dll
+C:\hospital\HospiEnCasa.App\HospiEnCasa.App.persistencia\obj\Debug\netstandard2.0\HospiEnCasa.App.Persistencia.pdb

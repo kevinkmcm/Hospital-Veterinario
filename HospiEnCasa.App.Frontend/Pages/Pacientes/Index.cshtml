@@ -1,0 +1,56 @@
+﻿@page
+@model HospiEnCasa.App.Frontend.Pages.Pacientes.IndexModel
+@{
+}
+<h1>lista de pacientes</h1><br>
+
+<a class "btn btn-primary" asp-page="./Crear">Nuevo Paciente</a>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Raza</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Color</th>
+            <th scope="col">Pedegree</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Direccion</th>
+            <th scope="col">Latitud</th>
+            <th scope="col">Longitud</th>
+            <th scope="col">Ciudad</th>
+            <th scope="col">Fecha_Nacimiento</th>
+            <th scope="col">FamiliarDesignado</th>
+            <th scope="col">SignoVital</th>
+            <th scope="col">Historia</th>
+            
+            
+
+            
+
+            
+        </tr>
+    </thead>
+
+    @foreach (var p in @Model.Pacientes)
+    {
+        <tr>
+            <td>@p.Raza</td>
+            <td>@p.Tipo</td>
+            <td>@p.Edad</td>
+            <td>@p.Color</td>
+            <td>@p.Pedegree</td>
+            <td>@p.Nombre</td>
+            <td>@p.Direccion</td>
+            <td>@p.Latitud</td>
+            <td>@p.Longitud</td>
+            <td>@p.Ciudad</td>
+            <td>@p.Fecha_Nacimiento</td>
+            <td>@p.FamiliarDesignado</td>
+            <td>@p.SignoVital</td>
+            <td>@p.Historia</td>
+        </tr>
+        
+    }
+</table>

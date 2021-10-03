@@ -1,0 +1,35 @@
+﻿@page
+@model HospiEnCasa.App.Frontend.Pages.Familiar.IndexModel
+@{
+}
+
+<h1>Lista de Familiares Designados </h1><br>
+
+<a class "btn btn-primary" asp-page="./Crear">Agregar Nuevo Familiar</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellidos</th>
+            <th scope="col">NumeroTelefono</th>
+            <th scope="col">Genero</th>
+            <th scope="col">Parentesco</th>
+            <th scope="col">Correo</th>
+
+        </tr>
+    </thead>
+
+    @foreach (var f in @Model.Familiares)
+    {
+        <tr>
+            <td>@f.Nombre</td>
+            <td>@f.Apellidos</td>
+            <td>@f.NumeroTelefono</td>
+            <td>@f.Genero</td>
+            <td>@f.Parentesco</td>
+            <td>@f.Correo</td>
+            
+        </tr>
+    }
+</table>
