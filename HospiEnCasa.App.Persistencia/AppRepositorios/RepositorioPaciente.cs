@@ -19,10 +19,10 @@ namespace HospiEnCasa.App.Persistencia
 
         ///<param name="appContext"></param>//
 
-        public RepositorioPaciente(AppContext appContext)
-        {
-            _appContext=_appContext;
-        }
+       // public RepositorioPaciente(AppContext _appContext)
+        //{
+          //  this._appContext=_appContext;
+        //}
     
        Paciente IRepositorioPaciente.AddPaciente(Paciente paciente)
         {

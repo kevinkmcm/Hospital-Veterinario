@@ -1,6 +1,8 @@
 ﻿@page
 @model HospiEnCasa.App.Frontend.Pages.Pacientes.IndexModel
 @{
+    //para eliminar la herencia de la paguina principal 
+    //_Layout=null;
 }
 <h1>lista de pacientes</h1><br>
 
@@ -24,6 +26,8 @@
             <th scope="col">FamiliarDesignado</th>
             <th scope="col">SignoVital</th>
             <th scope="col">Historia</th>
+            <th scope="col">Actualizar</th>
+            <th scope="col">Eliminar</th>
             
             
 
@@ -50,6 +54,8 @@
             <td>@p.FamiliarDesignado</td>
             <td>@p.SignoVital</td>
             <td>@p.Historia</td>
+            <td><a class="btn btn-secondary" asp-page="./Actualizar" asp-route-id="@p.Id">Actualizar</a></td>
+            <td><a class="btn btn-secondary" asp-page="./Eliminar" asp-route-id="@p.Id">Eliminar</a></td>
         </tr>
         
     }
