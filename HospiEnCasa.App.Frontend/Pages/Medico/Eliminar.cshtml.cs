@@ -4,23 +4,23 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using HospiEnCasa.App.Dominio;
 using HospiEnCasa.App.Persistencia;
+using HospiEnCasa.App.Dominio;
 
-namespace HospiEnCasa.App.Frontend.Pages.Pacientes
+namespace HospiEnCasa.App.Frontend.Pages.Medico
 {
-    public class EliminarModel : PageModel
+    public class eliminarModel : PageModel
     {
-        private readonly IRepositorioPaciente _RepoPaciente;
-        public Paciente paciente {get;set;}
-        public EliminarModel (IRepositorioPaciente _RepoPaciente)
+        private readonly IRepositorioMedico _RepoMedico;
+        public Medico medico {get;set;}
+        public EliminarModel (IRepositorioMedico _RepoMedico)
         {
-            this._RepoPaciente=_RepoPaciente;
+            this._RepoMedico=_RepoMedico;
         }
         public IActionResult OnGet(int Id)
         {
-            paciente=_RepoPaciente.GetPaciente( Id);
-            if(paciente==null)
+             medico=_RepoMedico.GetMedico( Id);
+            if(Medico==null)
             {
                 return NotFound();
             }
@@ -28,11 +28,10 @@ namespace HospiEnCasa.App.Frontend.Pages.Pacientes
                 return Page();
             }
         }
-
         public IActionResult OnPost(int Id)
         {
-            _RepoPaciente.DeletePaciente(Id);
+         _RepoMedico.DeleteMedico(Id);
             return RedirectToPage("Index");       
         }
-     }
+    }
 }

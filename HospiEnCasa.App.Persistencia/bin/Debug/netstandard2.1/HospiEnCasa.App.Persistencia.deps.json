@@ -9,7 +9,7 @@
     ".NETStandard,Version=v2.1/": {
       "HospiEnCasa.App.Persistencia/1.0.0": {
         "dependencies": {
-          "HospiEnCasa.app.Dominio": "1.0.0",
+          "HospiEnCasa.App.Dominio": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.0",
           "Microsoft.EntityFrameworkCore.Design": "5.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
@@ -1530,9 +1530,9 @@
           }
         }
       },
-      "HospiEnCasa.app.Dominio/1.0.0": {
+      "HospiEnCasa.App.Dominio/1.0.0": {
         "runtime": {
-          "HospiEnCasa.app.Dominio.dll": {}
+          "HospiEnCasa.App.Dominio.dll": {}
         }
       }
     }
@@ -2432,7 +2432,7 @@
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
-    "HospiEnCasa.app.Dominio/1.0.0": {
+    "HospiEnCasa.App.Dominio/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

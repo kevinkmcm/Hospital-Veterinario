@@ -1,6 +1,8 @@
 using System;
 using HospiEnCasa.App.Dominio;
-namespace HospiEnCasa.app.Dominio
+using System.Collections.Generic;
+
+namespace HospiEnCasa.App.Dominio
 {
     public class Paciente:Mascota
     {
@@ -10,9 +12,9 @@ namespace HospiEnCasa.app.Dominio
         public string Ciudad {get;set;}
         public DateTime Fecha_Nacimiento {get;set;}
         public FamiliarDesignado FamiliarDesignado {get;set;}
-        public SignoVital SignoVital {get;set;}
+        public List<SignoVital> SignoVital {get;set;}
         public Historia Historia {get;set;}
-        public Enfermera Enfermera {get;set;}
+        public Medico Medico {get;set;}
 
     }
 }

@@ -11,7 +11,7 @@ namespace HospiEnCasa.App.Consola
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World Entity framework!");
-            AddPaciente();
+           // AddPaciente();
            //BuscarPaciente(1);
         }
 
@@ -24,7 +24,7 @@ namespace HospiEnCasa.App.Consola
                 Direccion= "calle 13 ",
                 Longitud= 5,
                 Latitud= -7,
-                Ciudad="cali",
+                Ciudad="cali"
                // FechaNacimiento= new DateTime(2000,01,12)
 
 

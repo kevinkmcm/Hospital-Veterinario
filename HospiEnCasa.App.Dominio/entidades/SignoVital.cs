@@ -6,11 +6,13 @@ namespace HospiEnCasa.App.Dominio
     {
      public int Id {get;set;}
     
-     public FechaHora FechaHora{get;set;}
+     public DateTime FechaHora{get;set;}
     
      public TipoSigno Signo {get;set;}
     
-     public int Valor {get;set;}    
+     public int Valor {get;set;}  
+
+     
 
     }
 }

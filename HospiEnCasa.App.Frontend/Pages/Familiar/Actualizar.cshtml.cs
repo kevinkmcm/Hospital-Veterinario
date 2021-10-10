@@ -4,25 +4,24 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using HospiEnCasa.App.Dominio;
 using HospiEnCasa.App.Persistencia;
+using HospiEnCasa.App.Dominio;
 
-namespace HospiEnCasa.App.Frontend.Pages.Pacientes
+namespace HospiEnCasa.App.Frontend.Familiar
 {
     public class ActualizarModel : PageModel
     {
-        private readonly IRepositorioPaciente _RepoPaciente;
+        private readonly IRepositorioFamiliar _RepoFamiliar;
 
-        public Paciente paciente {get;set;}
-        public ActualizarModel(IRepositorioPaciente _RepoPaciente)
+        public Familiar familiar {get;set;}
+        public ActualizarModel(IRepositorioFamiliar _RepoFamiliar)
         {
-            this._RepoPaciente=_RepoPaciente;
+            this._RepoFamiliar=_RepoFamiliar;
         }
-
         public IActionResult OnGet(int Id)
         {
-            paciente=_RepoPaciente.GetPaciente(Id);
-            if(paciente==null)
+            aciente=_RepoFamiliar.GetFamiliar(Id);
+            if(familiar==null)
             {
                 return NotFound();
             }
@@ -30,9 +29,9 @@ namespace HospiEnCasa.App.Frontend.Pages.Pacientes
                 return Page();
             }
         }
-        public IActionResult OnPost(Paciente paciente)
+        public IActionResult OnPost(Familiar familiar)
         {
-            _RepoPaciente.UpdatePaciente(paciente);
+            _RepoFamiliar.UpdateFamiliar(familiar);
             return RedirectToPage("Index");
         }
     }

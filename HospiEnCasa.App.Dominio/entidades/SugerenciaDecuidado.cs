@@ -5,8 +5,9 @@ namespace HospiEnCasa.App.Dominio
     public class SugerenciaDecuidado
     {
         public int Id {get;set;}
-        public FechaHora FechaHora {get;set;}
+        public DateTime FechaHora {get;set;}
         public string Descripcion {get;set;}
+         
         
         
 

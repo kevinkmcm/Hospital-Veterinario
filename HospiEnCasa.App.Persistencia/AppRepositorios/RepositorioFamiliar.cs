@@ -1,7 +1,9 @@
- using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using HospiEnCasa.App.Dominio;
 using Microsoft.EntityFrameworkCore;
+using System;
+using HospiEnCasa.App.Persistencia;
 
 namespace HospiEnCasa.App.Persistencia
 {
@@ -11,7 +13,7 @@ namespace HospiEnCasa.App.Persistencia
         ///Referecia al contexto del paciente
         ///</summary>
 
-        private readonly AppContext _appContext;
+        public readonly AppContext _appContext= new AppContext();
          ///<summary>
         ///Metodo constructor utiliza
         ///Inyeccion de dependencia para indicar el contexto a utilizar
@@ -19,43 +21,43 @@ namespace HospiEnCasa.App.Persistencia
 
         ///<param name="appContext"></param>//
 
-        public RepositorioFamiliar(AppContext appContext)
-        {
-            _appContext=_appContext;
-        }
+        //public RepositorioFamiliar(AppContext appContext)
+        //{
+          //  this._appContext=_appContext;
+        //}
     
-       familiar IRepositorioFamiliar.AddFamiliar(Familiar familiar)
+       FamiliarDesignado IRepositorioFamiliar.AddFamiliarDesignado(FamiliarDesignado familiar)
         {
-            var familiarAdicionado=_appContext.familiar.Add(familiar);
+            var familiarAdicionado=_appContext.Familiar.Add(familiar);
              _appContext.SaveChanges();
              return familiarAdicionado.Entity;
 
         }
 
-       void  IRepositorioFamiliar.DeleteFamiliarDesignado(int IdMedico)
+       void  IRepositorioFamiliar.DeleteFamiliarDesignado(int IdFamiliarDesignado)
         {
-            var familiarencontrado= _appContext.familiar.FirstOrDefault(p => p.Id==IdFamiliarDesignado );
+            var familiarencontrado= _appContext.Familiar.Find(IdFamiliarDesignado );
             if (familiarencontrado==null)
             return;
-            _appContext.FamiliarDesignado.Remove(familiarencontrado);
+            _appContext.Familiar.Remove(familiarencontrado);
             _appContext.SaveChanges();
         }
 
         IEnumerable<FamiliarDesignado> IRepositorioFamiliar.GetAllFamiliarDesignados()
         {
-            return _appContext.familiar;
+            return _appContext.Familiar;
 
         }
 
-        Familiar IRepositorioFamiliar.GetFamiliarDesignado(int IdFamiliarDesignado)
+        FamiliarDesignado IRepositorioFamiliar.GetFamiliarDesignado(int IdFamiliarDesignado)
         {
-            return _appContext.Familiar.FirstOrDefault(p => p.Id==IdFamiliarDesignado );
+            return _appContext.Familiar.Find(IdFamiliarDesignado );
 
         }
 
-        Paciente IRepositorioFamiliar.UpdateFamiliarDesignado(Familiar familiar)
+        FamiliarDesignado IRepositorioFamiliar.UpdateFamiliarDesignado(FamiliarDesignado familiar)
         {
-            var familiarencontrado= _appContext.familiar.FirstOrDefault(p => p.Id==familiar.Id );
+            var familiarencontrado= _appContext.Familiar.Find(familiar.Id );
             if (familiarencontrado!=null)
             {
                 familiarencontrado.Id=familiar.Id; 

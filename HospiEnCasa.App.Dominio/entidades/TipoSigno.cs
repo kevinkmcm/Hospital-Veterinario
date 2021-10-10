@@ -3,9 +3,15 @@ using HospiEnCasa.App.Dominio;
 using System;
 namespace HospiEnCasa.App.Dominio
 {
-    public class TipoSigno
+    public enum TipoSigno
     {
-        public int Id {get;set;}
+        
+        FrecduenciaCardiaca,
+
+        FrecuenciaRespiratoria,
+        
+        TemperaturaCorporal 
+    
     }
 }
 

@@ -1,7 +1,9 @@
- using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using HospiEnCasa.App.Dominio;
 using Microsoft.EntityFrameworkCore;
+using System;
+using HospiEnCasa.App.Persistencia;
 
 namespace HospiEnCasa.App.Persistencia
 {
@@ -11,7 +13,7 @@ namespace HospiEnCasa.App.Persistencia
         ///Referecia al contexto del paciente
         ///</summary>
 
-        private readonly AppContext _appContext;
+        public readonly AppContext _appContext;
          ///<summary>
         ///Metodo constructor utiliza
         ///Inyeccion de dependencia para indicar el contexto a utilizar
@@ -19,14 +21,14 @@ namespace HospiEnCasa.App.Persistencia
 
         ///<param name="appContext"></param>//
 
-        public RepositorioMedico(AppContext appContext)
-        {
-            _appContext=_appContext;
-        }
+        //public RepositorioMedico(AppContext appContext)
+        //{
+          //  _appContext=_appContext;
+        //}
     
-       Paciente IRepositorioMedico.AddMedico(Medico medico)
+       Medico IRepositorioMedico.AddMedico(Medico medico)
         {
-            var medicoAdicionado=_appContext.medico.Add(medico);
+            var medicoAdicionado=_appContext.Medicos.Add(medico);
              _appContext.SaveChanges();
              return medicoAdicionado.Entity;
 
@@ -34,10 +36,10 @@ namespace HospiEnCasa.App.Persistencia
 
        void  IRepositorioMedico.DeleteMedico(int IdMedico)
         {
-            var medicoencontrado= _appContext.Medico.FirstOrDefault(p => p.Id==IdMedico );
+            var medicoencontrado= _appContext.Medicos.Find(IdMedico );
             if (medicoencontrado==null)
             return;
-            _appContext.Medico.Remove(medicoencontrado);
+            _appContext.Medicos.Remove(medicoencontrado);
             _appContext.SaveChanges();
         }
 
@@ -47,19 +49,18 @@ namespace HospiEnCasa.App.Persistencia
 
         }
 
-        Paciente IRepositorioMedico.GetMedico(int IdMedico)
+        Medico IRepositorioMedico.GetMedico(int IdMedico)
         {
-            return _appContext.Medicos.FirstOrDefault(p => p.Id==IdMedico );
+            return _appContext.Medicos.Find(IdMedico );
 
         }
 
-        Paciente IRepositorioMedico.UpdateMedico(Medico medico)
+        Medico IRepositorioMedico.UpdateMedico(Medico medico)
         {
-            var medicoencontrado= _appContext.Medicos.FirstOrDefault(p => p.Id==medico.Id );
+            var medicoencontrado= _appContext.Medicos.Find(medico.Id );
             if (medicoencontrado!=null)
             {
-                medicoencontrado.Id=medico.Id; 
-                medicoencontrado.Edad=medico.Nombre;
+                medicoencontrado.Id=medico.Id;
                 medicoencontrado.Apellidos=medico.Apellidos;
                 medicoencontrado.NumeroTelefono=medico.NumeroTelefono;
                 medicoencontrado.Genero=medico.Genero;

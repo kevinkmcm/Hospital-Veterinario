@@ -21,7 +21,7 @@ namespace HospiEnCasa.App.Frontend.Pages.Medico
         }
         public void OnGet()
         {
-            Medico=new Medico();
+            medico=new medico();
         }
 
         public IActionResult OnPost(Medico medico)

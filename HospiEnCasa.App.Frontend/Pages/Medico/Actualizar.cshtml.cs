@@ -4,25 +4,25 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using HospiEnCasa.App.Dominio;
 using HospiEnCasa.App.Persistencia;
+using HospiEnCasa.App.Dominio;
 
-namespace HospiEnCasa.App.Frontend.Pages.Pacientes
+namespace HospiEnCasa.App.Frontend.Pages.Medico
 {
     public class ActualizarModel : PageModel
     {
-        private readonly IRepositorioPaciente _RepoPaciente;
+        private readonly IRepositorioMedico _RepoMedico;
 
-        public Paciente paciente {get;set;}
-        public ActualizarModel(IRepositorioPaciente _RepoPaciente)
+        public Medico medico {get;set;}
+        public ActualizarModel(IRepositorioMedico _RepoMedico)
         {
-            this._RepoPaciente=_RepoPaciente;
+            this._RepoMedico=_RepoMedico;
         }
 
         public IActionResult OnGet(int Id)
         {
-            paciente=_RepoPaciente.GetPaciente(Id);
-            if(paciente==null)
+            medico=_RepoMedico.GetMedico(Id);
+            if(medico==null)
             {
                 return NotFound();
             }
@@ -30,9 +30,9 @@ namespace HospiEnCasa.App.Frontend.Pages.Pacientes
                 return Page();
             }
         }
-        public IActionResult OnPost(Paciente paciente)
+        public IActionResult OnPost(Medico medico)
         {
-            _RepoPaciente.UpdatePaciente(paciente);
+            _RepoMedico.UpdateMedico(medico);
             return RedirectToPage("Index");
         }
     }

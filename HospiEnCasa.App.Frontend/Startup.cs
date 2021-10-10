@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using HospiEnCasa.App.Persistencia;
+using HospiEnCasa.App.Dominio;
 
 namespace HospiEnCasa.App.Frontend
 {
@@ -25,12 +26,12 @@ namespace HospiEnCasa.App.Frontend
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            //services.AddSingleton<IRepositorioFamaliar,RepositorioFamiliar>();
-            //services.AddSingleton<IRepositorioMedico,RepositorioMedico>();
+            services.AddSingleton<IRepositorioFamiliar,RepositorioFamiliar>();
+            services.AddSingleton<IRepositorioMedico,RepositorioMedico>();
             services.AddSingleton<IRepositorioPaciente,RepositorioPaciente>();
         }
-        }
-        }
+        //}
+        //}
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -59,4 +60,5 @@ namespace HospiEnCasa.App.Frontend
             });
         }
     }
+    
 }

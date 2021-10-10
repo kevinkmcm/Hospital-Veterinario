@@ -11,20 +11,20 @@ namespace HospiEnCasa.App.Frontend.Pages.Medico
 {
     public class IndexModel : PageModel
     {
-        public class IndexModel:PageModel
-        {
-            private readonly IRepisitorioMedico _RepoMedico;
+        
+            private readonly IRepositorioMedico _RepoMedico;
 
             public IEnumerable <Medico> Medicos {get;set;}
 
-            public IndexModel (IRepisitorioMedico _RepoMedico)
+            public IndexModel (IRepositorioMedico _RepoMedico)
             {
                 this._RepoMedico=_RepoMedico;
             }
-        }
+        
         public void OnGet()
         {
             Medicos=_RepoMedico.GetAllMedicos();
         }
     }
+
 }

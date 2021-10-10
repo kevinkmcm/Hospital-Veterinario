@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using HospiEnCasa.App.Persistencia;
+using HospiEnCasa.App.Dominio;
 
 namespace HospiEnCasa.App.Frontend.Pages.Familiar
 {
@@ -19,7 +21,7 @@ namespace HospiEnCasa.App.Frontend.Pages.Familiar
         }
         public void OnGet()
         {
-            Familiar=new Familiar();
+            familiar=new familiar();
         }
         public IActionResult OnPost( Familiar familiar)
         {
