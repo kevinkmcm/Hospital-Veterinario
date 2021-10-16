@@ -13,7 +13,7 @@ namespace HospiEnCasa.App.Persistencia
         ///Referecia al contexto del paciente
         ///</summary>
 
-        public readonly AppContext _appContext;
+        private readonly AppContext _appContext= new AppContext();
          ///<summary>
         ///Metodo constructor utiliza
         ///Inyeccion de dependencia para indicar el contexto a utilizar
@@ -23,12 +23,12 @@ namespace HospiEnCasa.App.Persistencia
 
         //public RepositorioMedico(AppContext appContext)
         //{
-          //  _appContext=_appContext;
+          //this._appContext=_appContext;
         //}
     
-       Medico IRepositorioMedico.AddMedico(Medico medico)
+       Medico IRepositorioMedico.AddMedico(Medico medic)
         {
-            var medicoAdicionado=_appContext.Medicos.Add(medico);
+            var medicoAdicionado=_appContext.Medicos.Add(medic);
              _appContext.SaveChanges();
              return medicoAdicionado.Entity;
 
@@ -55,18 +55,18 @@ namespace HospiEnCasa.App.Persistencia
 
         }
 
-        Medico IRepositorioMedico.UpdateMedico(Medico medico)
+        Medico IRepositorioMedico.UpdateMedico(Medico medic)
         {
-            var medicoencontrado= _appContext.Medicos.Find(medico.Id );
+            var medicoencontrado= _appContext.Medicos.Find(medic.Id );
             if (medicoencontrado!=null)
             {
-                medicoencontrado.Id=medico.Id;
-                medicoencontrado.Apellidos=medico.Apellidos;
-                medicoencontrado.NumeroTelefono=medico.NumeroTelefono;
-                medicoencontrado.Genero=medico.Genero;
-                medicoencontrado.Especialidad=medico.Especialidad;
-                medicoencontrado.Codigo=medico.Codigo;
-                medicoencontrado.Registro_Rethus=medico.Registro_Rethus;
+                medicoencontrado.Id=medic.Id;
+                medicoencontrado.Apellidos=medic.Apellidos;
+                medicoencontrado.NumeroTelefono=medic.NumeroTelefono;
+                medicoencontrado.Genero=medic.Genero;
+                medicoencontrado.Especialidad=medic.Especialidad;
+                medicoencontrado.Codigo=medic.Codigo;
+                medicoencontrado.Registro_Rethus=medic.Registro_Rethus;
 
                
                

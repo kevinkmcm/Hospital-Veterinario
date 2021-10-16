@@ -13,7 +13,7 @@ namespace HospiEnCasa.App.Persistencia
         ///Referecia al contexto del paciente
         ///</summary>
 
-        public readonly AppContext _appContext= new AppContext();
+        private readonly AppContext _appContext= new AppContext();
          ///<summary>
         ///Metodo constructor utiliza
         ///Inyeccion de dependencia para indicar el contexto a utilizar
@@ -21,9 +21,9 @@ namespace HospiEnCasa.App.Persistencia
 
         ///<param name="appContext"></param>//
 
-       // public RepositorioPaciente(AppContext _appContext)
+        //public RepositorioPaciente(AppContext _appContext)
         //{
-          //  this._appContext=_appContext;
+          //this._appContext=_appContext;
         //}
     
        Paciente IRepositorioPaciente.AddPaciente(Paciente paciente)

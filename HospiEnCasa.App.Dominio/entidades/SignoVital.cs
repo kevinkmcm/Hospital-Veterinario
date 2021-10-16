@@ -12,6 +12,8 @@ namespace HospiEnCasa.App.Dominio
     
      public int Valor {get;set;}  
 
+     public int Pacienteid {get;set;}
+
      
 
     }

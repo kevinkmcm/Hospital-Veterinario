@@ -11,9 +11,9 @@ namespace HospiEnCasa.App.Persistencia
     {
         IEnumerable<Medico> GetAllMedicos();
 
-        Medico AddMedico(Medico medico);
+        Medico AddMedico(Medico medic);
 
-        Medico UpdateMedico(Medico medico);
+        Medico UpdateMedico(Medico medic);
 
         void DeleteMedico(int IdMedico);
 

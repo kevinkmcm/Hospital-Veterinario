@@ -1,0 +1,15 @@
+# Creado por https://www.toptal.com/developers/gitignore/api/dotnetcore
+# Edite en https://www.toptal.com/developers/gitignore?templates=dotnetcore
+
+### DotnetCore ###
+# Carpetas de compilación de .NET Core
+compartimiento/
+obj /
+
+# Ubicaciones de módulos de nodo comunes
+/ node_modules
+/ wwwroot / node_modules
+
+.vscode
+
+# Fin de https://www.toptal.com/developers/gitignore/api/dotnetcore

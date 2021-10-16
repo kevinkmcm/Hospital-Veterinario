@@ -5,11 +5,12 @@ using Microsoft.EntityFrameworkCore;
 using HospiEnCasa.App.Persistencia;
 using System.Linq;
 
+
 namespace HospiEnCasa.App.Persistencia
 {
     public interface IRepositorioFamiliar
     {
-        IEnumerable<FamiliarDesignado> GetAllFamiliarDesignados();
+        IEnumerable <FamiliarDesignado> GetAllFamiliarDesignados();
 
         FamiliarDesignado AddFamiliarDesignado(FamiliarDesignado familiar);
 
