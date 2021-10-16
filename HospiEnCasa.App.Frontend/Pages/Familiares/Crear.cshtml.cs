@@ -7,13 +7,13 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using HospiEnCasa.App.Persistencia;
 using HospiEnCasa.App.Dominio;
 
-namespace HospiEnCasa.App.Frontend.Pages.Familiar
+namespace HospiEnCasa.App.Frontend.Pages.Familiares
 {
     public class crearModel : PageModel
     {
         private readonly IRepositorioFamiliar _RepoFamiliar;
 
-        public Familiar familiar{get;set;}
+        public FamiliarDesignado familiarDesignado{get;set;}
 
         public crearModel (IRepositorioFamiliar _RepoFamiliar)
         {
@@ -21,11 +21,11 @@ namespace HospiEnCasa.App.Frontend.Pages.Familiar
         }
         public void OnGet()
         {
-            familiar=new familiar();
+            familiarDesignado=new FamiliarDesignado();
         }
-        public IActionResult OnPost( Familiar familiar)
+        public IActionResult OnPost( FamiliarDesignado familiarDesignado)
         {
-            _RepoFamiliar.addFamiliar(familiar);
+            _RepoFamiliar.AddFamiliarDesignado(familiarDesignado);
             return RedirectToPage("Index");
         }
     }

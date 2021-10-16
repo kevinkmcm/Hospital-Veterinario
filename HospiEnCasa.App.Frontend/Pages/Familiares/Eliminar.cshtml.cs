@@ -7,20 +7,22 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using HospiEnCasa.App.Persistencia;
 using HospiEnCasa.App.Dominio;
 
-namespace HospiEnCasa.App.Frontend.Pages.Familiar
+namespace HospiEnCasa.App.Frontend.Pages.Familiares
 {
     public class EliminarModel : PageModel
     {
         private readonly IRepositorioFamiliar _RepoFamiliar;
-        public Familiar familiar {get;set;}
+
+        public FamiliarDesignado familiarDesignado {get;set;}
+
         public EliminarModel (IRepositorioFamiliar _RepoFamiliar)
         {
             this._RepoFamiliar=_RepoFamiliar;
         }
         public IActionResult OnGet( int Id)
         {
-             familiar=_RepoFamiliar.GetFamiliar(  Id);
-            if(Familiar==null)
+             familiarDesignado=_RepoFamiliar.GetFamiliarDesignado(  Id);
+            if(familiarDesignado==null)
             {
                 return NotFound();
             }
@@ -30,7 +32,7 @@ namespace HospiEnCasa.App.Frontend.Pages.Familiar
         }
         public IActionResult OnPost(int Id)
         {
-         _RepoFamiliar.DeleteFamiliar(Id);
+         _RepoFamiliar.DeleteFamiliarDesignado(Id);
             return RedirectToPage("Index");      
         }
     }

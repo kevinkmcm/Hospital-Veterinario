@@ -23,7 +23,7 @@ namespace HospiEnCasa.App.Frontend.Pages.Pacientes
 
         public void OnGet()
         {
-            paciente=new paciente();
+            paciente=new Paciente();
         }
         //METODO PARA EMVIAR A LA BASE DE DATOS
         public IActionResult OnPost(Paciente paciente)

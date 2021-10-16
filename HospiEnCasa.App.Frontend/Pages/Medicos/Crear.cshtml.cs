@@ -13,20 +13,20 @@ namespace HospiEnCasa.App.Frontend.Pages.Medico
     {
         private readonly IRepositorioMedico _RepoMedico;
 
-        public Medico medico{get;set;}
+        // public Medico medic{get;set;}
         
-        public crearModel (IRepositorioMedico _RepoMedico)
+        public CrearModel (IRepositorioMedico _RepoMedico)
         {
             this._RepoMedico=_RepoMedico;
         }
         public void OnGet()
         {
-            medico=new medico();
+            // medic=new Medico();
         }
 
-        public IActionResult OnPost(Medico medico)
+        public IActionResult OnPost(dynamic medic)
         {
-            _RepoMedico.addMedico(medico);
+            _RepoMedico.AddMedico(medic);
             return RedirectToPage("Index");
         }
     }

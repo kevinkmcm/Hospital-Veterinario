@@ -7,13 +7,13 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using HospiEnCasa.App.Persistencia;
 using HospiEnCasa.App.Dominio;
 
-namespace HospiEnCasa.App.Frontend.Pages.Familiar
+namespace HospiEnCasa.App.Frontend.Pages.Familiares
 {
     public class IndexModel : PageModel
     {
         private readonly IRepositorioFamiliar _RepoFamiliar;
 
-        public IEnumerable <Familiar> Familiares {get;set;}
+        public IEnumerable <FamiliarDesignado> Familiar {get;set;}
 
         public IndexModel(IRepositorioFamiliar _RepoFamiliar)
         {
@@ -22,7 +22,7 @@ namespace HospiEnCasa.App.Frontend.Pages.Familiar
     
         public void OnGet()
         {
-            Familiares=_RepoFamiliar.GetAllFamiliares();
+            Familiar=_RepoFamiliar.GetAllFamiliarDesignados();
         }
     }
 }

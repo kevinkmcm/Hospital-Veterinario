@@ -9,30 +9,29 @@ using HospiEnCasa.App.Dominio;
 
 namespace HospiEnCasa.App.Frontend.Pages.Medico
 {
-    public class ActualizarModel : PageModel
+    public class EliminarModel : PageModel
     {
         private readonly IRepositorioMedico _RepoMedico;
-
-        public Medico medico {get;set;}
-        public ActualizarModel(IRepositorioMedico _RepoMedico)
+        // public Medico medic {get;set;}
+        public EliminarModel(IRepositorioMedico _RepoMedico)
         {
-            this._RepoMedico=_RepoMedico;
+            this._RepoMedico = _RepoMedico;
         }
-
         public IActionResult OnGet(int Id)
         {
-            medico=_RepoMedico.GetMedico(Id);
-            if(medico==null)
+            medic = _RepoMedico.GetMedico(Id);
+            if (medic == null)
             {
                 return NotFound();
             }
-            else{
+            else
+            {
                 return Page();
             }
         }
-        public IActionResult OnPost(Medico medico)
+        public IActionResult OnPost(int Id)
         {
-            _RepoMedico.UpdateMedico(medico);
+            _RepoMedico.DeleteMedico(Id);
             return RedirectToPage("Index");
         }
     }

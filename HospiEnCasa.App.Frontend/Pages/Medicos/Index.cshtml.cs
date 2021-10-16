@@ -14,7 +14,7 @@ namespace HospiEnCasa.App.Frontend.Pages.Medico
         
             private readonly IRepositorioMedico _RepoMedico;
 
-            public IEnumerable <Medico> Medicos {get;set;}
+            public IEnumerable <Medico> medic {get;set;}
 
             public IndexModel (IRepositorioMedico _RepoMedico)
             {
@@ -23,7 +23,7 @@ namespace HospiEnCasa.App.Frontend.Pages.Medico
         
         public void OnGet()
         {
-            Medicos=_RepoMedico.GetAllMedicos();
+            medic=_RepoMedico.GetAllMedicos();
         }
     }
 

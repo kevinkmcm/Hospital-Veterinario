@@ -1,11 +1,11 @@
 ﻿@page
-@model HospiEnCasa.App.Frontend.Pages.Familiar.IndexModel
+@model HospiEnCasa.App.Frontend.Pages.Familiares.IndexModel
 @{
 }
 
 <h1>Lista de Familiares Designados </h1><br>
 
-<a class "btn btn-primary" asp-page="./Crear">Agregar Nuevo Familiar</a>
+<a class ="btn btn-primary" asp-page="./Crear">Nuevo familiar</a>
 
 <table class="table">
     <thead>
@@ -20,7 +20,7 @@
         </tr>
     </thead>
 
-    @foreach (var f in @Model.Familiares)
+    @foreach (var f in @Model.familiarDesignado)
     {
         <tr>
             <td>@f.Nombre</td>
@@ -29,6 +29,8 @@
             <td>@f.Genero</td>
             <td>@f.Parentesco</td>
             <td>@f.Correo</td>
+            <td><a class="btn btn-secondary" asp-page=".Actualizar" asp-route-Id="@f.Id">Actualizar</a></td>
+            <td><a class="btn btn-secondary" asp-page=".Eliminar" asp-route-Id="@f.Id">Eliminar</a></td>
             
         </tr>
     }

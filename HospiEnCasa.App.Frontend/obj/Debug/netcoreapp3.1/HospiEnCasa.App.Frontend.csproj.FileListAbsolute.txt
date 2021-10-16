@@ -36,3 +36,15 @@ C:\hospital\HospiEnCasa.App\HospiEnCasa.App.Frontend\obj\Debug\netcoreapp3.1\Hos
 C:\hospital\HospiEnCasa.App\HospiEnCasa.App.Frontend\obj\Debug\netcoreapp3.1\HospiEnCasa.App.Frontend.genruntimeconfig.cache
 C:\hospital\HospiEnCasa.App\HospiEnCasa.App.Frontend\obj\Debug\netcoreapp3.1\HospiEnCasa.App.Frontend.csproj.CopyComplete
 C:\hospital\HospiEnCasa.App\HospiEnCasa.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\prueba\pruebas.cshtml.g.cs
+C:\hospital\HospiEnCasa.App\HospiEnCasa.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Familiares\Actualizar.cshtml.g.cs
+C:\hospital\HospiEnCasa.App\HospiEnCasa.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Familiares\Crear.cshtml.g.cs
+C:\hospital\HospiEnCasa.App\HospiEnCasa.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Familiares\Eliminar.cshtml.g.cs
+C:\hospital\HospiEnCasa.App\HospiEnCasa.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Familiares\Index.cshtml.g.cs
+C:\hospital\HospiEnCasa.App\HospiEnCasa.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Medicos\Actualizar.cshtml.g.cs
+C:\hospital\HospiEnCasa.App\HospiEnCasa.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Medicos\Crear.cshtml.g.cs
+C:\hospital\HospiEnCasa.App\HospiEnCasa.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Medicos\Eliminar.cshtml.g.cs
+C:\hospital\HospiEnCasa.App\HospiEnCasa.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Medicos\Index.cshtml.g.cs
+C:\hospital\HospiEnCasa.App\HospiEnCasa.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Pacientes\Actualizar.cshtml.g.cs
+C:\hospital\HospiEnCasa.App\HospiEnCasa.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Pacientes\Crear.cshtml.g.cs
+C:\hospital\HospiEnCasa.App\HospiEnCasa.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Pacientes\Eliminar.cshtml.g.cs
+C:\hospital\HospiEnCasa.App\HospiEnCasa.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Pacientes\Index.cshtml.g.cs
