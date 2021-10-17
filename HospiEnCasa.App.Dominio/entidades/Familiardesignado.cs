@@ -1,5 +1,6 @@
 using HospiEnCasa.App.Dominio;
 using System;
+
 namespace HospiEnCasa.App.Dominio
 {
     public class FamiliarDesignado:Persona
@@ -7,8 +8,6 @@ namespace HospiEnCasa.App.Dominio
         public string Prentesco {get;set;}
 
         public string Correo {get;set;}
-
-
     }
 
 }

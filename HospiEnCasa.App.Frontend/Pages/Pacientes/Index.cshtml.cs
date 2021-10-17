@@ -9,22 +9,22 @@ using HospiEnCasa.App.Dominio;
 
 namespace HospiEnCasa.App.Frontend.Pages.Pacientes
 {
-    
+
 
     public class IndexModel : PageModel
     {
         private readonly IRepositorioPaciente _RepoPaciente;
-    
-        public IEnumerable <Paciente>   Pacientes {get;set;}
+
+        public IEnumerable<Paciente> Pacientes { get; set; }
 
         public IndexModel(IRepositorioPaciente _RepoPaciente)
         {
-            this._RepoPaciente=_RepoPaciente;
+            this._RepoPaciente = _RepoPaciente;
         }
 
         public void OnGet()
         {
-            Pacientes=_RepoPaciente.GetAllPacientes();
+            Pacientes = _RepoPaciente.GetAllPacientes();
         }
     }
 }

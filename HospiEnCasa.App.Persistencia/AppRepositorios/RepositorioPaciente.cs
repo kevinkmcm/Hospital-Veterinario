@@ -65,7 +65,7 @@ namespace HospiEnCasa.App.Persistencia
                 pacienteEncontrado.Tipo=paciente.Tipo;
                 pacienteEncontrado.Edad=paciente.Edad;
                 pacienteEncontrado.Color=paciente.Color;
-                pacienteEncontrado.Pedigree=paciente.Pedigree;
+                pacienteEncontrado.PedigreeEnum=paciente.PedigreeEnum;
                 pacienteEncontrado.Direccion=paciente.Direccion;
                 pacienteEncontrado.Latitud=paciente.Latitud;
                 pacienteEncontrado.Longitud=paciente.Longitud;

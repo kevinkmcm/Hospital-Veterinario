@@ -8,7 +8,6 @@ namespace HospiEnCasa.App.Dominio
         public string TarjetaPreofecional {get;set;}  
 
         public int Horas_Laborales {get;set;}
-
     }
 }
 

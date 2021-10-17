@@ -15,8 +15,6 @@ namespace HospiEnCasa.App.Frontend.Pages.Pacientes
 #nullable restore
 #line 1 "C:\hospital\HospiEnCasa.App\HospiEnCasa.App.Frontend\Pages\_ViewImports.cshtml"
 using HospiEnCasa.App.Frontend;
-using HospiEnCasa.App.Persistencia;
-using HospiEnCasa.App.Dominio;
 
 #line default
 #line hidden

@@ -14,9 +14,5 @@ namespace HospiEnCasa.App.Dominio
         public string NumeroTelefono {get;set;}
         
         public Genero Genero {get;set;}
-
     }
 }
-
-
-     

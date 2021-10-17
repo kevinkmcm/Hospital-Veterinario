@@ -20,14 +20,14 @@
         </tr>
     </thead>
 
-    @foreach (var f in @Model.familiarDesignado)
+    @foreach (var f in @Model.Familiar)
     {
         <tr>
             <td>@f.Nombre</td>
             <td>@f.Apellidos</td>
             <td>@f.NumeroTelefono</td>
             <td>@f.Genero</td>
-            <td>@f.Parentesco</td>
+            <td>@f.Prentesco</td>
             <td>@f.Correo</td>
             <td><a class="btn btn-secondary" asp-page=".Actualizar" asp-route-Id="@f.Id">Actualizar</a></td>
             <td><a class="btn btn-secondary" asp-page=".Eliminar" asp-route-Id="@f.Id">Eliminar</a></td>
