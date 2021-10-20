@@ -1,76 +1,101 @@
 ﻿@page
+@using HospiEnCasa.App.Dominio;
 @model HospiEnCasa.App.Frontend.Pages.Pacientes.EliminarModel
 @{
 }
-<h1> Eliminar Paciente</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>hospital veterinario</title>
+    <h1> Eliminar Paciente</h1>
+    <meta name="viewport" content="width device.width, user-scalable=1.0, inicial-scalable=1.0, maximun-scalable=1.0,minimun-scalable=1.0">
+    <link rel="stylesheet" href="~/css/stylos.css">
+    <script type="text/javascript">
+        function ConfirmDelete() {
+            var respuesta = confirm("seguro deseas eliminar al paciente? ");
+            if (respuesta == true) {
+                return true;
+            }
+            else {
+                return false;
+            }
 
-<form method="post">
-    <div class="form-group">
-        <label asp-for="paciente.Id" ></label>
-        <input asp-for="paciente.Id" class="form-control" readonly>
-    </div>
+        }
+    </script>
+</head>
+<body>
+    <form method="post">
+        <div class="form-group">
+            <label asp-for="paciente.Id"></label>
+            <input asp-for="paciente.Id" class="form-control" readonly>
+        </div>
 
-    <div class="form-group">
-        <label asp-for="paciente.Nombre" ></label>
-        <input asp-for="paciente.Nombre " class="form-control" required="required">
-    </div>
+        <div class="form-group">
+            <label asp-for="paciente.Nombre"></label>
+            <input asp-for="paciente.Nombre " class="form-control" required="required">
+        </div>
 
-    <div class="form-group">
-        <label asp-for="paciente.Raza"></label>
-        <input asp-for="paciente.Raza" class="form-control" required="required">
-    </div>
+        <div class="form-group">
+            <label asp-for="paciente.Raza"></label>
+            <input asp-for="paciente.Raza" class="form-control" required="required">
+        </div>
 
-    <div class="form-group">
-        <label asp-for="paciente.Edad"></label>
-        <input asp-for="paciente.Edad" class="form-control" required="required">
-    </div>
+        <div class="form-group">
+            <label asp-for="paciente.Edad"></label>
+            <input asp-for="paciente.Edad" class="form-control" required="required">
+        </div>
 
-    <div class="form-group">
-        <label asp-for="paciente.Color"></label>
-        <input asp-for="paciente.Color" class="form-control" required="required">
-    </div>
+        <div class="form-group">
+            <label asp-for="paciente.Color"></label>
+            <input asp-for="paciente.Color" class="form-control" required="required">
+        </div>
 
-    <div class="form-group">
-        <label asp-for="paciente.Direccion"></label>
-        <input asp-for="paciente.Direccion" class="form-control" required="required">
-    </div>
+        <div class="form-group">
+            <label asp-for="paciente.Direccion"></label>
+            <input asp-for="paciente.Direccion" class="form-control" required="required">
+        </div>
 
-    <div class="form-group">
-        <label asp-for="paciente.Latitud"></label>
-        <input asp-for="paciente.Latitud" class="form-control" required="required">
-    </div>
+        <div class="form-group">
+            <label asp-for="paciente.Latitud"></label>
+            <input asp-for="paciente.Latitud" class="form-control" required="required">
+        </div>
 
-    <div class="form-group">
-        <label asp-for="paciente.Longitud"></label>
-        <input asp-for="paciente.Longitud" class="form-control" required="required">
-    </div>
+        <div class="form-group">
+            <label asp-for="paciente.Longitud"></label>
+            <input asp-for="paciente.Longitud" class="form-control" required="required">
+        </div>
 
-    <div class="form-group">
-        <label asp-for="paciente.Ciudad"></label>
-        <input asp-for="paciente.Ciudad" class="form-control" required="required">
-    </div>
+        <div class="form-group">
+            <label asp-for="paciente.Ciudad"></label>
+            <input asp-for="paciente.Ciudad" class="form-control" required="required">
+        </div>
 
-    <div class="form-group">
-        <label asp-for="paciente.Fecha_Nacimiento"></label>
-        <input asp-for="paciente.Fecha_Nacimiento" class="form-control" required="required">
-    </div>
+        <div class="form-group">
+            <label asp-for="paciente.Fecha_Nacimiento"></label>
+            <input asp-for="paciente.Fecha_Nacimiento" class="form-control" required="required">
+        </div>
 
-    <div class="form-group">
-        <label asp-for="paciente.FamiliarDesignado"></label>
-        <input asp-for="paciente.FamiliarDesignado" class="form-control" required="required">
-    </div>
+        <div class="form-group">
+            <label asp-for="paciente.FamiliarDesignado"></label>
+            <input asp-for="paciente.FamiliarDesignado" class="form-control">
+        </div>
 
-    <select name="Tipo">
-        <option value="Perro">Value 1</option>
-        <option value="Gato" selected>Value 2</option>
-    </select>
+        <div class="form-group">
+            <label asp-for="paciente.Tipo"></label>
+            <select asp-for="paciente.Tipo" asp-items="Html.GetEnumSelectList<Tipo>()" class="form-control" required="required"></select>
+        </div>
 
-    <label><input type="checkbox" id="cbox1" value="first_checkbox"> Si pedegree</label><br>
+        <div class="form-group">
+            <label asp-for="paciente.PedigreeEnum"></label>
+            <select asp-for="paciente.PedigreeEnum" asp-items="Html.GetEnumSelectList<PedigreeEnum>()" class="form-control" required="required"></select>
+        </div>
+        <br>
 
-    <input type="checkbox" id="cbox2" value="second_checkbox"> <label for="cbox2">No pedegree</label>
+        <button type="submit" class="btn btn-primary" onclick="return ConfirmDelete()">Eliminar</button>
 
-    <button type="submit" class="btn-prymary">Eliminar</button>
-
-</form>
+    </form>
+</body>
+</html>
 
 

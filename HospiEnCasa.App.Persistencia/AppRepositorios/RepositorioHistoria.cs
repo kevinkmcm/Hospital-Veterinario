@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using HospiEnCasa.App.Persistencia;
 
-namespace HospiEnCasa.App.Persistencia
+/*namespace HospiEnCasa.App.Persistencia
 {
     public class RepositorioHistoria : IRepositorioHistoria
     {
@@ -77,4 +77,4 @@ namespace HospiEnCasa.App.Persistencia
 
     }
 
-}
+}*/

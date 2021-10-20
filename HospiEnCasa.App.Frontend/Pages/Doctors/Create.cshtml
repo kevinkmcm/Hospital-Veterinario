@@ -1,49 +1,56 @@
 ﻿@page
+@using HospiEnCasa.App.Dominio;
 @model HospiEnCasa.App.Frontend.CreateModel
 @{
 }
-<h1> Nuevo Medico</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>hospital veterinario</title>
+    <h1> Nuevo Medico</h1>
+    <meta name="viewport" content="width device.width, user-scalable=1.0, inicial-scalable=1.0, maximun-scalable=1.0,minimun-scalable=1.0">
+    <link rel="stylesheet" href="~/css/stylos.css">
+</head>
+<body>
+    <form method="post">
+        <div id="container" class="form-group">
+            <label asp-for="medic.Nombre"></label>
+            <input asp-for="medic.Nombre" class="form-control" required="required">
+        </div>
 
-<form method="post">
+        <div class="form-group">
+            <label asp-for="medic.Apellidos"></label>
+            <input asp-for="medic.Apellidos" class="form-control" required="required">
+        </div>
 
-    <div class="form-group">
-        <label asp-for="medic.Nombre"></label>
-        <input asp-for="medic.Nombre" class="form-control" required="required">
-    </div>
+        <div class="form-group">
+            <label asp-for="medic.NumeroTelefono"></label>
+            <input asp-for="medic.NumeroTelefono" class="form-control" required="required">
+        </div>
 
-    <div class="form-group">
-        <label asp-for="medic.Apellidos"></label>
-        <input asp-for="medic.Apellidos" class="form-control" required="required">
-    </div>
+        <div class="form-group">
+            <label asp-for="medic.Codigo"></label>
+            <input asp-for="medic.Codigo" class="form-control" required="required">
+        </div>
 
-    <div class="form-group">
-        <label asp-for="medic.NumeroTelefono"></label>
-        <input asp-for="medic.NumeroTelefono" class="form-control" required="required">
-    </div>
+        <div class="form-group">
+            <label asp-for="medic.Registro_Rethus"></label>
+            <input asp-for="medic.Registro_Rethus" class="form-control" required="required">
+        </div>
 
-    <div class="form-group">
-        <label asp-for="medic.Codigo"></label>
-        <input asp-for="medic.Codigo" class="form-control" required="required">
-    </div>
+        <div class="form-group">
+            <label asp-for="medic.Especialidad"></label>
+            <input asp-for="medic.Especialidad" class="form-control" required="required">
+        </div>
 
-    <div class="form-group">
-        <label asp-for="medic.Registro_Rethus"></label>
-        <input asp-for="medic.Registro_Rethus" class="form-control" required="required">
-    </div>
+        <div class="form-group">
+            <label asp-for="medic.Genero"></label>
+            <select asp-for="medic.Genero" asp-items="Html.GetEnumSelectList<Genero>()" class="form-control" required="required"></select>
+        </div>
 
-    <div class="form-group">
-        <label asp-for="medic.Especialidad"></label>
-        <input asp-for="medic.Especialidad" class="form-control" required="required">
-    </div>
+        <button type="submit" class="btn btn-primary" onclick="window.alert('El Veterinario se a creado con Exito');">Crear</button>
+    </form>
 
-    <select name="Genero">
-        <option value="Masculino">Value 1</option>
-        <option value="Femenino" selected>Value 2</option>
-    </select>
-
-    <button type="submit" class="btn btn-primary">Crear</button>
-
-    
-
-
-</form>
+</body>
+</html>

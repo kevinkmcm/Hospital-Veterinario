@@ -2,35 +2,51 @@
 @model HospiEnCasa.App.Frontend.IndexModel
 @{
 }
-<h1> Lista De Medicos En Servicio</h1><br>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>hospital veterinario</title>
+    <h1> Lista De Medicos En Servicio</h1>
+    <meta name="viewport" content="width device.width, user-scalable=1.0, inicial-scalable=1.0, maximun-scalable=1.0,minimun-scalable=1.0">
+    <link rel="stylesheet" href="~/css/stylos.css">
+    <br>
+</head>
+<body>
 
-<a class="btn btn-primary" asp-page="./crear">Nuevo Medico</a>
+    <a class="btn btn-primary" asp-page="./Create">Nuevo Veterinario </a>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th scope="col">Nombre</th>
-            <th scope="col">Apellidos</th>
-            <th scope="col">NumeroTelefono</th>
-            <th scope="col">Genero</th>
-            <th scope="col">Especialidad</th>
-            <th scope="col">Codigo</th>
-            <th scope="col">Registro_Rethus</th>
-        </tr>
-    </thead>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col"> Nombre</th>
+                <th scope="col"> Apellidos</th>
+                <th scope="col"> Numero Telefono</th>
+                <th scope="col"> Genero</th>
+                <th scope="col"> Especialidad</th>
+                <th scope="col"> Codigo</th>
+                <th scope="col"> Registro_Rethus</th>
+            </tr>
+        </thead>
 
-    @foreach (var m in @Model.Medicos)
-    {
-        <tr>
-            <td>@m.Nombre</td>
-            <td>@m.Apellidos</td>
-            <td>@m.NumeroTelefono</td>
-            <td>@m.Genero</td>
-            <td>@m.Especialidad</td>
-            <td>@m.Codigo</td>
-            <td>@m.Registro_Rethus</td>
+        @foreach (var m in @Model.Medicos)
+        {
+            <tr>
+                <td>@m.Nombre</td>
+                <td>@m.Apellidos</td>
+                <td>@m.NumeroTelefono</td>
+                <td>@m.Genero</td>
+                <td>@m.Especialidad</td>
+                <td>@m.Codigo</td>
+                <td>@m.Registro_Rethus</td>
+                <td><a class="btn btn-primary" asp-page="./Update" asp-route-Id="@m.Id">Actualizar</a></td>
+                <td><a class="btn btn-primary" asp-page="./Delete" asp-route-Id="@m.Id">Eliminar</a></td>
 
-        </tr>
-        
-    }
-</table>
+
+            </tr>
+
+        }
+    </table>
+
+</body>
+</html>

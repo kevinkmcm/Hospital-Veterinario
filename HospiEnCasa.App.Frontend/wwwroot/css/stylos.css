@@ -1,0 +1,71 @@
+﻿@import url ('https://fonts.googleapis.com/css2? family = Advertencia: wght @ 600 & display = swap');
+@import url ('https://fonts.googleapis.com/css2? family = Permanent + Marker & display = swap');
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Marker Permanent', cursive;
+}
+
+body {
+    font-family: 'Advertencia', cursive;
+}
+
+.header {
+    height: 60px
+}
+
+    .header .contenedor {
+        display: flex;
+        justify-content: space-around
+    }
+
+.logo, .icon_menu {
+    margin: 5px
+}
+
+.icon_menu {
+    direction: block;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    background-color: aqua;
+    color: chartreuse;
+    text-align: center;
+    line-height: 40px;
+    margin-left: auto;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+}
+
+.menu {
+    list-style: none;
+    padding: 5%;
+    margin: 5%;
+}
+
+.menu__link {
+    display: block;
+    padding: 10px;
+    background: #C39BD3;
+    text-decoration: underline;
+    color: crimson;
+}
+
+    .menu__link:hover {
+        background: #A569BD;
+        color: #E74C3C;
+    }
+
+.mostar {
+    left: 0;
+}

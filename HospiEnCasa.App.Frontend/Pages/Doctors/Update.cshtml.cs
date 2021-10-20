@@ -30,7 +30,7 @@ namespace HospiEnCasa.App.Frontend
                 return Page();
             }
         }
-        public IActionResult OnPost(dynamic medic)
+        public IActionResult OnPost(Medico medic)
         {
             _RepoMedico.UpdateMedico(medic);
             return RedirectToPage("Index");

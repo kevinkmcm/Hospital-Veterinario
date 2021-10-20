@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using HospiEnCasa.App.Persistencia;
 using HospiEnCasa.App.Dominio;
+using Microsoft.AspNetCore.Authorization;
 
 namespace HospiEnCasa.App.Frontend.Pages.Pacientes
 {
+    [Authorize]
 
 
     public class IndexModel : PageModel

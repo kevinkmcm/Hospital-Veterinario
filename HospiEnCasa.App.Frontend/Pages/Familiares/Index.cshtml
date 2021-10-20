@@ -2,36 +2,47 @@
 @model HospiEnCasa.App.Frontend.Pages.Familiares.IndexModel
 @{
 }
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>hospital veterinario</title>
+    <h1>Lista de Familiares Designados </h1>
+    <meta name="viewport" content="width device.width, user-scalable=1.0, inicial-scalable=1.0, maximun-scalable=1.0,minimun-scalable=1.0">
+    <link rel="stylesheet" href="~/css/stylos.css">
+    <br>
+</head>
+<body>
 
-<h1>Lista de Familiares Designados </h1><br>
+    <a class="btn btn-primary" asp-page="./Crear">Nuevo familiar</a>
 
-<a class ="btn btn-primary" asp-page="./Crear">Nuevo familiar</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellidos</th>
+                <th scope="col">NumeroTelefono</th>
+                <th scope="col">Genero</th>
+                <th scope="col">Parentesco</th>
+                <th scope="col">Correo</th>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th scope="col">Nombre</th>
-            <th scope="col">Apellidos</th>
-            <th scope="col">NumeroTelefono</th>
-            <th scope="col">Genero</th>
-            <th scope="col">Parentesco</th>
-            <th scope="col">Correo</th>
+            </tr>
+        </thead>
 
-        </tr>
-    </thead>
+        @foreach (var f in @Model.Familiar)
+        {
+            <tr>
+                <td>@f.Nombre</td>
+                <td>@f.Apellidos</td>
+                <td>@f.NumeroTelefono</td>
+                <td>@f.Genero</td>
+                <td>@f.Prentesco</td>
+                <td>@f.Correo</td>
+                <td><a class="btn btn-primary" asp-page="./Actualizar" asp-route-Id="@f.Id">Actualizar</a></td>
+                <td><a class="btn btn-primary" asp-page="./Eliminar" asp-route-Id="@f.Id">Eliminar</a></td>
 
-    @foreach (var f in @Model.Familiar)
-    {
-        <tr>
-            <td>@f.Nombre</td>
-            <td>@f.Apellidos</td>
-            <td>@f.NumeroTelefono</td>
-            <td>@f.Genero</td>
-            <td>@f.Prentesco</td>
-            <td>@f.Correo</td>
-            <td><a class="btn btn-secondary" asp-page=".Actualizar" asp-route-Id="@f.Id">Actualizar</a></td>
-            <td><a class="btn btn-secondary" asp-page=".Eliminar" asp-route-Id="@f.Id">Eliminar</a></td>
-            
-        </tr>
-    }
-</table>
+            </tr>
+        }
+    </table>
+</body>
+</html>

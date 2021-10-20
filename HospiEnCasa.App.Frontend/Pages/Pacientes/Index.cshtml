@@ -1,62 +1,71 @@
 ﻿@page
 @model HospiEnCasa.App.Frontend.Pages.Pacientes.IndexModel
 @{
-    //para eliminar la herencia de la paguina principal 
+    //para eliminar la herencia de la paguina principal
     //_Layout=null;
 }
-<h1>lista de pacientes</h1><br>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>hospital veterinario</title>
+    <h1>lista de pacientes</h1>
+    <meta name="viewport" content="width device.width, user-scalable=1.0, inicial-scalable=1.0, maximun-scalable=1.0,minimun-scalable=1.0">
+    <link rel="stylesheet" href="~/css/stylos.css">
+    <br>
+</head>
+<body>
 
-<a class ="btn btn-primary" asp-page="./Crear">Nuevo Paciente</a>
+    <a class="btn btn-primary" asp-page="./Crear">Nuevo Paciente</a>
 
 
-<table class="table">
-    <thead>
-        <tr>
-            <th scope="col">Raza</th>
-            <th scope="col">Tipo</th>
-            <th scope="col">Edad</th>
-            <th scope="col">Color</th>
-            <th scope="col">Pedegree</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Direccion</th>
-            <th scope="col">Latitud</th>
-            <th scope="col">Longitud</th>
-            <th scope="col">Ciudad</th>
-            <th scope="col">Fecha_Nacimiento</th>
-            <th scope="col">FamiliarDesignado</th>
-            <th scope="col">SignoVital</th>
-            <th scope="col">Historia</th>
-            <th scope="col">Actualizar</th>
-            <th scope="col">Eliminar</th>
-            
-            
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Raza</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Edad</th>
+                <th scope="col">Color</th>
+                <th scope="col">Pedegree</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Direccion</th>
+                <th scope="col">Latitud</th>
+                <th scope="col">Longitud</th>
+                <th scope="col">Ciudad</th>
+                <th scope="col">Fecha_Nacimiento</th>
+                
 
-            
 
-            
-        </tr>
-    </thead>
 
-    @foreach (var p in @Model.Pacientes)
-    {
-        <tr>
-            <td>@p.Raza</td>
-            <td>@p.Tipo</td>
-            <td>@p.Edad</td>
-            <td>@p.Color</td>
-            <td>@p.PedigreeEnum</td>
-            <td>@p.Nombre</td>
-            <td>@p.Direccion</td>
-            <td>@p.Latitud</td>
-            <td>@p.Longitud</td>
-            <td>@p.Ciudad</td>
-            <td>@p.Fecha_Nacimiento</td>
-            <td>@p.FamiliarDesignado</td>
-            <td>@p.SignoVital</td>
-            <td>@p.Historia</td>
-            <td><a class="btn btn-secondary" asp-page="./Actualizar" asp-route-id="@p.Id">Actualizar</a></td>
-            <td><a class="btn btn-secondary" asp-page="./Eliminar" asp-route-id="@p.Id">Eliminar</a></td>
-        </tr>
-        
-    }
-</table>
+
+
+
+
+            </tr>
+        </thead>
+
+        @foreach (var p in @Model.Pacientes)
+        {
+            <tr>
+                <td>@p.Raza</td>
+                <td>@p.Tipo</td>
+                <td>@p.Edad</td>
+                <td>@p.Color</td>
+                <td>@p.PedigreeEnum</td>
+                <td>@p.Nombre</td>
+                <td>@p.Direccion</td>
+                <td>@p.Latitud</td>
+                <td>@p.Longitud</td>
+                <td>@p.Ciudad</td>
+                <td>@p.Fecha_Nacimiento</td>
+              
+                <td><a class="btn btn-primary" asp-page="./Actualizar" asp-route-id="@p.Id">Actualizar</a></td>
+                <td><a class="btn btn-primary" asp-page="./Eliminar" asp-route-id="@p.Id">Eliminar</a></td>
+                <td><a class="btn btn-primary" asp-page="./vital" asp-route-id="@p.Id"> Signos</a></td>
+                <td><a class="btn btn-primary" asp-page="./Historial" asp-route-id="@p.Id"> Historial</a></td>
+            </tr>
+
+        }
+    </table>
+</body>
+</html>

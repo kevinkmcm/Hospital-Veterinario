@@ -29,6 +29,7 @@ namespace HospiEnCasa.App.Frontend
             services.AddSingleton<IRepositorioFamiliar,RepositorioFamiliar>();
             services.AddSingleton<IRepositorioMedico,RepositorioMedico>();
             services.AddSingleton<IRepositorioPaciente,RepositorioPaciente>();
+            services.AddControllersWithViews();
         }
         //}
         //}
@@ -51,6 +52,7 @@ namespace HospiEnCasa.App.Frontend
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

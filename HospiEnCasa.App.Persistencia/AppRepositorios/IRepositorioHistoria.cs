@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using HospiEnCasa.App.Persistencia;
 using System.Linq;
 
-namespace HospiEnCasa.App.Persistencia
+/*namespace HospiEnCasa.App.Persistencia
 {
     public interface IRepositorioHistoria
     {
@@ -22,4 +22,4 @@ namespace HospiEnCasa.App.Persistencia
         
    }
 
-}
+}*/
